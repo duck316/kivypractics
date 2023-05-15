@@ -1,0 +1,76 @@
+<ScreenOne>:
+    padding: 10
+    spacing: 10
+    valign: 'top'
+    orientation: 'vertical'
+    canvas:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<ScreenTwo>:
+    valign: 'top'
+    padding: 10
+    spacing: 10
+    size_hint: 1,.1
+    canvas:
+        Color:
+            rgb: 0,0,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<ScreenTree>:
+    cols: 1
+    valign: 'top'
+    size_hint: 1,1
+    canvas:
+        Color:
+            rgba: 1,1,1,.8
+    ScrollView:
+        do_scroll_y: True
+        do_scroll_x: False
+        GridLayout:
+            id: articulos
+            size_hint_y: None
+            cols: 2
+            row_default_height: root.height*0.1
+            height: self.minimum_height
+
+
+
+<MyLabel>:
+    color: 1,0,0
+    font_size: 20
+    bold: True
+    halign: 'left'
+    text_size: self.size
+    markup: True
+    valign: 'top'
+    halign: 'left'
+
+
+<MiBtn>
+    color: 1,1,1
+    valign: 'top'
+    size_hint: 0.2,0.8
+
+<crealabel>:
+    color: 1,0,0
+    font_size: 20
+    bold: True
+    markup: True
+    halign: 'left'
+    text_size: self.size
+    valign: 'top'
+    halign: 'left'
+
+
+
+
+
+
+
+
