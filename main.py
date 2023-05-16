@@ -71,12 +71,16 @@ class ScreenTree(GridLayout):
             {"titulo": "Titulo Prueba 10", "resumen": "resumen Prueba 10","imagen": "logo.png"}
         )
 
+        num_rows = 25
+
         for i in range(int(len(lista_prueba))):
-            self.ids.articulos.add_widget(Button(background_normal=lista_prueba[i]["imagen"]))
-            self.ids.articulos.add_widget(Label(text='[color=000000]'+lista_prueba[i]["titulo"]+'[/color]',
+            self.ids.details.rows = num_rows
+            self.ids.b_img.add_widget(Button(background_normal=lista_prueba[i]["imagen"]))
+            self.ids.details.add_widget(Label(text='[color=000000]'+lista_prueba[i]["titulo"]+'[/color]',
                                   markup = True))
-            self.ids.articulos.add_widget(Label(text='[color=000000]'+lista_prueba[i]["resumen"]+'[/color]',
+            self.ids.details.add_widget(Label(text='[color=000000]'+lista_prueba[i]["resumen"]+'[/color]',
                                   markup = True))
+            num_rows= num_rows+ 2
 
 
 

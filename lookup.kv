@@ -36,8 +36,29 @@
             id: articulos
             size_hint_y: None
             cols: 2
-            row_default_height: root.height*0.1
+            row_default_height: root.height*2
+            col_default_width: root.width *0.1
             height: self.minimum_height
+
+            BoxLayout:
+                id: b_img
+                size_hint: None, .3
+                width: 100
+                orientation: 'vertical'
+
+            GridLayout:
+                id: details
+                canvas:
+                    Color:
+                        rgb: 1,1,1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                cols: 1
+                rows: 2
+                row_default_height: root.height*0.1
+                #height: self.minimum_height
+
 
 
 
@@ -66,11 +87,3 @@
     text_size: self.size
     valign: 'top'
     halign: 'left'
-
-
-
-
-
-
-
-
